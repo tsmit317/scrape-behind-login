@@ -37,10 +37,10 @@ There are several ways of finding the element with XPATH. Easiest is to just rig
 Other examples: '//*[contains(text(),"Log In")]', '//span[. = "Log In"]'
 """
 driver.find_element(By.XPATH, "/html/body/div[4]/div/div/div/div[2]/div[2]/div/div/div[2]/div/div/div[2]/div[1]/form/div[4]/button/div/span").click()
-time.sleep(5) # Time for the login to redirect
+time.sleep(3) # Time for the login to redirect
 
 driver.get('https://www.hackerrank.com/settings/account')
-time.sleep(5)
+time.sleep(3)
 
 # Collect some data
 # topics = driver.find_elements(By.CLASS_NAME, 'topic-name')
