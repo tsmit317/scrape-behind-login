@@ -16,12 +16,11 @@ This can be found using the inspect tool and finding the name of the login input
 ![image](https://user-images.githubusercontent.com/13583303/179860059-91d2b049-3737-42fc-878f-8b0aed789b59.png)
 
 
-- A simple requests module POST method will only work for single instances, as it doesn't save cookies. 
-A requests [session](https://requests.readthedocs.io/en/latest/user/advanced/#session-objects) object is need to persist cookies and other parameters, keeping an account logged in. 
+- A simple requests module POST method will only work for single instances, since it doesn't save cookies. 
+A requests [session](https://requests.readthedocs.io/en/latest/user/advanced/#session-objects) object is need to persist cookies and other parameters, keeping an account logged in for future requests. 
 
-- Create a dictionary with the input field names and username/password and pass this data into the post request. 
-  Once the post request is sent, you should be able to make GET requests to other URL's as logged in. 
-
+- Session POST requests are executed the same way as regular POST request. Pass a dictionary containing input field names and username/password as key/vals into the data parameter. 
+ 
 - Authentication/csrf tokens might be required. It's possible to find hidden in the login page html of some websites, but I didn't have much luck for many sites. If you do find them, you can send an initial GET request to the login page and use Beautiful soup to parse/collect the token value. 
 
 #### Packages: 
