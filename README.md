@@ -1,6 +1,10 @@
 # Web Scraping Behind A Login
 
-## Using requests session object:
+Two methods for accessing data behind a login.
+
+
+
+### Using requests session object:
 
 - For both methods of logging in the first thing needed is the name of the fields used to login and the url the login post data to. 
 This can be found using the inspect tool and finding the name of the login input fields.
@@ -23,7 +27,9 @@ A requests [session](https://requests.readthedocs.io/en/latest/user/advanced/#se
 #### Packages: 
 - bs4 
 
-## Using Selenium WebDriver
+
+
+### Using Selenium WebDriver
 
 - [Selenium WebDriver](https://selenium-python.readthedocs.io/getting-started.html) is a tool for automated web application testing. It provides a way to interact with multiple elements on a web page and is another option for getting past logins. 
 
