@@ -19,7 +19,7 @@ This can be found using the inspect tool and finding the name of the login input
 - A simple requests module POST method will only work for single instances, since it doesn't save cookies. 
 A requests [session](https://requests.readthedocs.io/en/latest/user/advanced/#session-objects) object is need to persist cookies and other parameters, keeping an account logged in for future requests. 
 
-- Session POST requests are executed the same way as regular POST request. Pass a dictionary containing input field names and username/password as key/vals into the data parameter. 
+- Session POST requests are executed the same way as regular POST requests. Pass a dictionary containing input field names and username/password as key/vals into the data parameter. 
  
 - Authentication/csrf tokens might be required. It's possible to find hidden in the login page html of some websites, but I didn't have much luck for many sites. If you do find them, you can send an initial GET request to the login page and use Beautiful soup to parse/collect the token value. 
 
