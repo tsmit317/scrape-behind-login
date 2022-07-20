@@ -21,7 +21,7 @@ A requests [session](https://requests.readthedocs.io/en/latest/user/advanced/#se
 
 - Session POST requests are executed the same way as regular POST requests; pass a dictionary containing input field names and username/password as key/vals into the data parameter. 
  
-- Authentication/csrf tokens might be required. It's possible to find hidden in the login page html of some websites, but I didn't have much luck for many sites. If you do find them, you can send an initial GET request to the login page and use Beautiful soup to parse/collect the token value. 
+- Authentication/csrf tokens might be required. It's possible to find the tokens hidden in the login page html of some websites, but I didn't have much luck for many sites. If you do find them, you can send an initial GET request to the login page and use Beautiful soup to parse/collect the token value. 
 
 #### Packages: 
 - bs4 
