@@ -17,9 +17,9 @@ This can be found using the inspect tool and finding the name of the login input
 
 
 - A simple requests module POST method will only work for single instances, since it doesn't save cookies. 
-A requests [session](https://requests.readthedocs.io/en/latest/user/advanced/#session-objects) object is need to persist cookies and other parameters, keeping an account logged in for future requests. 
+A requests [session](https://requests.readthedocs.io/en/latest/user/advanced/#session-objects) object is needed to persist cookies and other parameters, keeping an account logged in for future requests. 
 
-- Session POST requests are executed the same way as regular POST requests. Pass a dictionary containing input field names and username/password as key/vals into the data parameter. 
+- Session POST requests are executed the same way as regular POST requests; pass a dictionary containing input field names and username/password as key/vals into the data parameter. 
  
 - Authentication/csrf tokens might be required. It's possible to find hidden in the login page html of some websites, but I didn't have much luck for many sites. If you do find them, you can send an initial GET request to the login page and use Beautiful soup to parse/collect the token value. 
 
@@ -34,7 +34,7 @@ A requests [session](https://requests.readthedocs.io/en/latest/user/advanced/#se
 
 - The webdriver is pretty straight forward. Once you know the html element ID names, you can instruct the driver insert the username/passwords into the input fields. Then you can instruct the driver to click on a submit button via an element name or its XPath. 
 
-- I used [WebDriver Manager](https://pypi.org/project/webdriver-manager/) package to save time since it sets driver binaries without having to actually download them. 
+- I used the [WebDriver Manager](https://pypi.org/project/webdriver-manager/) package to save time since it sets driver binaries without having to actually download them. 
 
 - There is the option of running the driver headless, that is, without a GUI which can save resources and time. It is commented out in the script.
 
